@@ -2,7 +2,7 @@
 
 ------------------------
 
-## What it can do?
+## What can it do?
 
 - Add Gateway
 - Edit Gateway
@@ -26,4 +26,4 @@
 - URL to access the frontend ```http://localhost:4000```
 - URL to access the backend ```http://localhost:3000```
 - URL to access the MongoDB using MongoDB Compass ```mongodb://root:123456@localhost:27017/gateway_manager_db?authSource=admin```
-- After you cannect with the mongodb you can insert the test data in the file ```gateways.json```
+- Then you can connect with the mongodb you can insert the test data in the file ```gateways.json```
