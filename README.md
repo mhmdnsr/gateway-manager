@@ -23,7 +23,7 @@
 
 - You have to install Docker
 - Inside the project root folder run ```docker-compose build && docker-compose up```
-- URL to access the frontend ```_http://localhost:4000_```
-- URL to access the backend ```_http://localhost:3000_```
-- URL to access the MongoDB using MongoDB Compass ```_mongodb://root:123456@localhost:27017/gateway_manager_db?authSource=admin_```
-- After you cannect with the mongodb you can insert the test data in the file ```_gateways.json_```
+- URL to access the frontend ```http://localhost:4000```
+- URL to access the backend ```http://localhost:3000```
+- URL to access the MongoDB using MongoDB Compass ```mongodb://root:123456@localhost:27017/gateway_manager_db?authSource=admin```
+- After you cannect with the mongodb you can insert the test data in the file ```gateways.json```
