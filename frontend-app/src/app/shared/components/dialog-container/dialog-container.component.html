@@ -1,0 +1,11 @@
+<div class="default-dialog-panel-container">
+  <div class="default-dialog-panel-header" [class.with-title]="dialogTitle">
+    <h2>{{dialogTitle}}</h2>
+    <a>
+      <mat-icon (click)="closeDialog()">close</mat-icon>
+    </a>
+  </div>
+  <div class="default-dialog-panel-content">
+    <ng-content></ng-content>
+  </div>
+</div>

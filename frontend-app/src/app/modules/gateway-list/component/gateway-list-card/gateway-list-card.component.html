@@ -1,0 +1,22 @@
+<div class="gateway-card mat-elevation-z3" *ngIf="gateway">
+  <div class="gateway-card__container">
+    <div class="gateway-card__icon">
+      <mat-icon>hub</mat-icon>
+    </div>
+    <div class="gateway-card__name">
+      <h4>{{gateway.name}}</h4>
+      <p>{{gateway.serialNumber}}</p>
+    </div>
+    <div class="gateway-card__info">
+      <p>{{gateway.ipAddress}}</p>
+    </div>
+    <div class="gateway-card__devices">
+      <h3>{{gateway.devices.length}}</h3>
+      <h4>Devices</h4>
+      <p>You can add up to 10 devices/gateway</p>
+    </div>
+  </div>
+  <div class="gateway-card__button" [routerLink]="'/gateway/' + gateway._id">
+    <p>View Gateway</p>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<app-dialog-container dialogId="device" [dialogTitle]="'Add Device'">
+  <div class="add-device">
+    <div class="add-device__form-container">
+      <div class="add-device__form-element">
+        <h3 class="label">Device Vendor</h3>
+        <input type="text" class="form-control" id="device-vendor" maxlength="28"
+               placeholder="Device Vendor" [formControl]="deviceVendor"
+               [class.input-error]="getFormFieldError(deviceVendor)">
+        <p class="form-error">{{getFormFieldError(deviceVendor)}}</p>
+      </div>
+      <div class="add-device__form-element">
+        <h3 class="label">Device UID</h3>
+        <div class="input-with-validation">
+          <input type="number" class="form-control" id="device-uid"
+                 placeholder="Device UID" [formControl]="deviceUID"
+                 [class.input-error]="getFormFieldError(deviceUID)">
+          <button [disabled]="validUID || deviceUID.invalid"
+                  (click)="validUID ? $event.preventDefault() : validateUID()"
+                  class="btn btn-icon" [class.input-with-validation__validated]="deviceUID">
+            <mat-icon [ngStyle]="{color: validUID ? 'red' : ''}">{{validUID ? 'check_circle' : 'rotate_left'}}</mat-icon>
+          </button>
+        </div>
+        <p class="form-error">{{getFormFieldError(deviceUID)}}</p>
+      </div>
+      <div class="add-device__form-element">
+        <h3 class="label">Device Creation Date</h3>
+        <input (keypress)="$event.preventDefault()" type="text" class="form-control" id="device-createdAt" [matDatepicker]="picker" (click)="picker.open()"
+               placeholder="Month Day, Year" [formControl]="deviceCreatedAt"
+               [class.input-error]="getFormFieldError(deviceCreatedAt)">
+        <mat-datepicker #picker></mat-datepicker>
+        <p class="form-error">{{getFormFieldError(deviceCreatedAt)}}</p>
+      </div>
+      <div class="add-device__form-element">
+        <h3 class="label">Device Status</h3>
+        <mat-slide-toggle
+          class="status-switch" [formControl]="deviceStatus">
+          Status
+        </mat-slide-toggle>
+      </div>
+    </div>
+    <div class="add-device__actions">
+      <button type="button" class="btn btn-custom-outline" (click)="closeDialog()">Cancel</button>
+      <button type="button" class="btn btn-custom-primary" (click)="addDevice()"
+              [disabled]="!(gatewayId && deviceUID.disabled && deviceUID.value && validUID && deviceVendor.valid && deviceCreatedAt.valid)">
+        Save
+      </button>
+    </div>
+  </div>
+</app-dialog-container>

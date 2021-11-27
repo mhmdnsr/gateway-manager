@@ -1,0 +1,24 @@
+<div class="device-card mat-elevation-z3" *ngIf="device">
+  <div class="device-card__container">
+    <div class="device-card__icon" [class.device-card__icon-online]="device.status"
+         [class.device-card__icon-offline]="!device.status">
+      <mat-icon>devices</mat-icon>
+    </div>
+    <div class="device-card__vendor">
+      <h4>{{device.vendor}}</h4>
+      <p>({{device.uid}})</p>
+    </div>
+    <div class="device-card__date">
+      <p>{{device.createdAt | date: 'MMM d, y'}}</p>
+    </div>
+    <div class="device-card__status">
+      <mat-slide-toggle
+        class="status-switch" [checked]="!!device.status" (toggleChange)="changeDeviceStatus()">
+        Status
+      </mat-slide-toggle>
+    </div>
+    <div class="device-card__action">
+      <button class="btn btn-custom-outline" (click)="deleteDevice()">Delete Device</button>
+    </div>
+  </div>
+</div>

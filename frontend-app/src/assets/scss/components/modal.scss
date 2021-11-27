@@ -1,0 +1,48 @@
+.default-dialog-panel-container {
+  width: 100%;
+  max-width: 700px !important;
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+
+  .mat-dialog-container {
+    margin: 0;
+    padding: 0;
+    border-radius: 15px;
+
+    .mat-dialog-content {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+
+  .default-dialog-panel-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 25px 10px 25px;
+    &.with-title {
+      justify-content: space-between;
+    }
+
+    a {
+      cursor: pointer;
+    }
+
+    mat-icon {
+      font-size: 25px;
+      //width: 45px;
+      width: 10px;
+      height: 40px;
+    }
+  }
+
+  .default-dialog-panel-content {
+    //padding: 15px 0 0 0;
+  }
+}
+
+.default-dialog-panel-backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}

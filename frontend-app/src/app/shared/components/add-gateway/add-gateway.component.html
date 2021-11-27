@@ -1,0 +1,41 @@
+<app-dialog-container dialogId="gateway" [dialogTitle]="id ? 'Edit Gateway' : 'Add Gateway'">
+  <div class="add-gateway">
+    <div class="add-gateway__form-container">
+      <div class="add-gateway__form-element">
+        <h3 class="label">Gateway Name</h3>
+        <input type="text" class="form-control" id="gateway-name" maxlength="35"
+               placeholder="Gateway Name" [formControl]="gatewayName"
+               [class.input-error]="getFormFieldError(gatewayName)">
+        <p class="form-error">{{getFormFieldError(gatewayName)}}</p>
+      </div>
+      <div class="add-gateway__form-element">
+        <h3 class="label">Gateway Serial Number</h3>
+        <div class="input-with-validation">
+          <input type="text" class="form-control" id="gateway-serialNumber"
+                 placeholder="Gateway Serial Number" [formControl]="gatewaySerialNumber"
+                 [class.input-error]="getFormFieldError(gatewaySerialNumber)">
+          <button [disabled]="validSerialNumber || gatewaySerialNumber.invalid"
+                  (click)="validSerialNumber ? $event.preventDefault() : validateSerialNumber()"
+                  class="btn btn-icon" [class.input-with-validation__validated]="validSerialNumber">
+            <mat-icon [ngStyle]="{color: validSerialNumber ? 'red' : ''}">{{validSerialNumber ? 'check_circle' : 'rotate_left'}}</mat-icon>
+          </button>
+        </div>
+        <p class="form-error">{{getFormFieldError(gatewaySerialNumber)}}</p>
+      </div>
+      <div class="add-gateway__form-element">
+        <h3 class="label">Gateway IP Address</h3>
+        <input type="text" class="form-control" id="gateway-ipAddress" mask="IP"
+               placeholder="xxx.xxx.xxx.xxx" [formControl]="gatewayIPAddress" [dropSpecialCharacters]="false"
+               [class.input-error]="getFormFieldError(gatewayIPAddress)">
+        <p class="form-error">{{getFormFieldError(gatewayIPAddress)}}</p>
+      </div>
+    </div>
+    <div class="add-gateway__actions">
+      <button type="button" class="btn btn-custom-outline" (click)="closeDialog()">Cancel</button>
+      <button type="button" class="btn btn-custom-primary" (click)="id ? editGateway() : addGateway()"
+              [disabled]="!(gatewayName.valid && (gatewaySerialNumber.valid || gatewaySerialNumber.disabled) && gatewaySerialNumber.value && validSerialNumber && gatewayIPAddress.valid)">
+        Save
+      </button>
+    </div>
+  </div>
+</app-dialog-container>

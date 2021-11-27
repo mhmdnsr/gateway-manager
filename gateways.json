@@ -1,0 +1,134 @@
+[{
+  "_id": {
+    "$oid": "61a11e9d393b67f64b83b395"
+  },
+  "serialNumber": "00x1",
+  "name": "Gateway One",
+  "ipAddress": "192.168.1.1",
+  "_createdAt": {
+    "$date": "2021-11-26T17:50:24.321Z"
+  },
+  "devices": [
+    {
+      "_id": "61a11eb6393b67f64b83b39b",
+      "uid": 1,
+      "vendor": "Device one",
+      "createdAt": {
+        "$date": "2021-10-31T22:00:00Z"
+      },
+      "status": 1,
+      "_createdAt": {
+        "$date": "2021-11-26T17:50:24.318Z"
+      }
+    },
+    {
+      "_id": "61a11ec1393b67f64b83b3a0",
+      "uid": 2,
+      "vendor": "Device two",
+      "createdAt": {
+        "$date": "2021-11-01T22:00:00Z"
+      },
+      "status": 0,
+      "_createdAt": {
+        "$date": "2021-11-26T17:50:24.318Z"
+      }
+    },
+    {
+      "_id": "61a11ece393b67f64b83b3a5",
+      "uid": 3,
+      "vendor": "Device three",
+      "createdAt": {
+        "$date": "2021-11-22T22:00:00Z"
+      },
+      "status": 0,
+      "_createdAt": {
+        "$date": "2021-11-26T17:50:24.318Z"
+      }
+    },
+    {
+      "_id": "61a11ed9393b67f64b83b3aa",
+      "uid": 4,
+      "vendor": "Device Four",
+      "createdAt": {
+        "$date": "2021-11-22T22:00:00Z"
+      },
+      "status": 1,
+      "_createdAt": {
+        "$date": "2021-11-26T17:50:24.318Z"
+      }
+    },
+    {
+      "_id": "61a11ef1393b67f64b83b3af",
+      "uid": 5,
+      "vendor": "Device Five",
+      "createdAt": {
+        "$date": "2021-11-10T22:00:00Z"
+      },
+      "status": 0,
+      "_createdAt": {
+        "$date": "2021-11-26T17:50:24.318Z"
+      }
+    },
+    {
+      "_id": "61a11efe393b67f64b83b3b4",
+      "uid": 6,
+      "vendor": "Device Six",
+      "createdAt": {
+        "$date": "2021-11-16T22:00:00Z"
+      },
+      "status": 1,
+      "_createdAt": {
+        "$date": "2021-11-26T17:50:24.318Z"
+      }
+    },
+    {
+      "_id": "61a11f0b393b67f64b83b3b9",
+      "uid": 7,
+      "vendor": "Device Seven",
+      "createdAt": {
+        "$date": "2021-11-16T22:00:00Z"
+      },
+      "status": 0,
+      "_createdAt": {
+        "$date": "2021-11-26T17:50:24.318Z"
+      }
+    },
+    {
+      "_id": "61a11f17393b67f64b83b3be",
+      "uid": 8,
+      "vendor": "Device Eight",
+      "createdAt": {
+        "$date": "2021-10-31T22:00:00Z"
+      },
+      "status": 0,
+      "_createdAt": {
+        "$date": "2021-11-26T17:50:24.318Z"
+      }
+    },
+    {
+      "_id": "61a11f27393b67f64b83b3c3",
+      "uid": 9,
+      "vendor": "Device Nine",
+      "createdAt": {
+        "$date": "2021-11-23T22:00:00Z"
+      },
+      "status": 0,
+      "_createdAt": {
+        "$date": "2021-11-26T17:50:24.318Z"
+      }
+    },
+    {
+      "_id": "61a120cdd71a7f19cc9527e6",
+      "uid": 10,
+      "vendor": "Device Ten",
+      "createdAt": {
+        "$date": "2021-11-16T22:00:00Z"
+      },
+      "status": 0,
+      "_createdAt": {
+        "$date": "2021-11-26T17:55:46.785Z"
+      }
+    }
+  ],
+  "__v": 0
+}]

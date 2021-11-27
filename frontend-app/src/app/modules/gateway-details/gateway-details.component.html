@@ -1,0 +1,15 @@
+<div class="gateway-details" *ngIf="gateway">
+  <div class="gateway-details__top-header">
+    <app-gateway-details-top-header [gateway]="gateway" (onAddDevice)="addDevice()"
+                                    (onEditGateway)="editGateway()"
+                                    (onDeleteGateway)="deleteGateway()"></app-gateway-details-top-header>
+  </div>
+  <div class="gateway-details__devices-container container">
+    <div class="gateway-details__devices-cards-container">
+      <div class="gateway-details__device-card" *ngFor="let device of gateway.devices">
+        <app-gateway-details-device-card [device]="device" [gatewayId]="gateway._id"
+                                         (onDeviceDelete)="onDeviceDelete()"></app-gateway-details-device-card>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="gateway-list">
+  <div class="gateway-list__top-header">
+    <app-gateway-list-top-header
+      [gateways]="gateways.length"
+      (onAddButtonClick)="addGateway()"></app-gateway-list-top-header>
+  </div>
+  <div class="gateway-list__container container">
+    <div class="gateway-list__cards-container">
+      <div class="gateway-list__card" *ngFor="let gateway of gateways">
+        <app-gateway-list-card [gateway]="gateway"></app-gateway-list-card>
+      </div>
+    </div>
+  </div>
+</div>

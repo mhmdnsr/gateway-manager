@@ -1,0 +1,18 @@
+<div class="dialog-confirm-dialog-container" mat-dialog-content>
+  <div class="dialog-confirm-dialog-header">
+    <div class="dialog-confirm-dialog-header_main">
+      <mat-icon>report_problem</mat-icon>
+      <div class="dialog-confirm-dialog-header_main-content">
+        <h2>Please Confirm</h2>
+        <p>{{confirmationMessage}}</p>
+      </div>
+    </div>
+    <a (click)="closeDialog(false)">
+      <mat-icon>close</mat-icon>
+    </a>
+  </div>
+  <div class="dialog-confirm-dialog-content">
+    <button class="btn btn-custom-secondary" (click)="closeDialog(false)">Cancel</button>
+    <button class="btn btn-custom-primary" (click)="closeDialog(true)">Confirm</button>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="gateway-details-top-header mat-elevation-z1" *ngIf="gateway">
+  <div class="gateway-details-top-header__gateway container">
+    <div class="gateway-details-top-header__gateway-info">
+      <div class="gateway-details-top-header__gateway-info-icon">
+        <mat-icon>hub</mat-icon>
+      </div>
+      <div class="gateway-details-top-header__gateway-info-details">
+        <h3>{{gateway.name}} <small>({{gateway.serialNumber}})</small></h3>
+        <p>{{gateway.ipAddress}}</p>
+      </div>
+    </div>
+    <div class="gateway-details-top-header__gateway-actions">
+      <button class="btn btn-custom-primary" (click)="editGateway()"><mat-icon>edit</mat-icon> Edit</button>
+      <button class="btn btn-custom-outline" (click)="deleteGateway()"><mat-icon>delete</mat-icon> Delete</button>
+    </div>
+  </div>
+  <div class="gateway-details-top-header__devices">
+    <div class="container gateway-details-top-header__devices-container">
+      <div class="gateway-details-top-header__devices-count">
+        <h4>{{gateway.devices.length}} <small>Device{{gateway.devices.length == 1 ? '' : 's'}}</small></h4>
+      </div>
+      <div class="gateway-details-top-header__devices-actions" *ngIf="gateway.devices.length < 10">
+        <button class="btn btn-custom-primary" (click)="addDevice()">
+          <mat-icon>add</mat-icon> Add Device</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,149 @@
+.gateway-details-top-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #ffffff;
+
+  &__gateway {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+
+    &-info {
+      padding: 15px 10px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      &-icon {
+        mat-icon {
+          font-size: 35px;
+          width: 35px;
+          height: 35px;
+          color: var(--app-primary-color);
+        }
+      }
+
+      &-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        h3 {
+          font-size: 22px;
+          font-weight: 500;
+          color: #000000;
+          margin-bottom: 5px !important;
+        }
+
+        small {
+          font-size: 18px;
+          font-weight: 400;
+          color: #8f9398;
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          color: #8f9398;
+        }
+      }
+    }
+
+    &-actions {
+      padding: 15px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        padding: 12px 20px;
+
+        &:first-child {
+          margin-right: 10px;
+        }
+
+        mat-icon {
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+          color: #ffffff;
+        }
+
+        &-custom-outline {
+          mat-icon {
+            color: var(--app-primary-color);
+          }
+
+          &:hover {
+            mat-icon {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__devices {
+    width: 100%;
+    border-top: 1px solid var(--app-border-color);
+    padding: 15px 10px;
+
+    &-container{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-count{
+      h4{
+        font-size: 23px;
+        font-weight: 600;
+        color: #000000;
+      }
+
+      small {
+        font-size: 21px;
+        font-weight: 500;
+        color: #000000;
+      }
+    }
+
+    &-actions{
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        padding: 12px 20px;
+
+        mat-icon {
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+::ng-deep {
+  .dialog-confirm-dialog-container {
+    .dialog-confirm-dialog-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px;
+
+      a {
+        cursor: pointer;
+      }
+
+      &_main {
+        display: flex;
+
+        mat-icon {
+          font-size: 25px;
+          color: red;
+          border-radius: 50%;
+          background-color: #fee2e2;
+          width: 45px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 15px;
+        }
+
+        &-content {
+          h2 {
+            margin-bottom: 5px;
+          }
+
+          p {
+            color: grey;
+            margin-bottom: 0;
+            width: 330px;
+          }
+        }
+      }
+    }
+
+    .dialog-confirm-dialog-content {
+      padding: 15px 25px;
+      background-color: #f8fafc;
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        &:last-child {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+
+  .dialog-confirm-dialog-backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+  }
+
+  .dialog-confirm-dialog-container {
+    width: 100%;
+    max-width: 510px !important;
+
+    .mat-dialog-container {
+      margin: 0;
+      padding: 0;
+      border-radius: 15px;
+
+      .mat-dialog-content {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}
